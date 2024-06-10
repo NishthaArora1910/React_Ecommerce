@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Box, Button, TextField, Typography, IconButton, List, ListItem, ListItemText, ListItemSecondaryAction } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -8,6 +9,17 @@ function TodoPage() {
   const [todos, setTodos] = useState([]);
   const [task, setTask] = useState('');
   const [editId, setEditId] = useState(null);
+
+  // Load todos from local storage when the component mounts
+  useEffect(() => {
+    const savedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    setTodos(savedTodos);
+  }, []);
+
+  // Save todos to local storage whenever they change
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const handleAddTodo = () => {
     if (editId) {

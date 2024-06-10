@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -51,11 +52,11 @@ function App() {
     <Router>
       <div className="App" style={{ backgroundColor: '#F8F9F9', minHeight: '100vh' }}>
         <Navbar onCartClick={handleDrawerOpen} />
-        <Container sx={{ mt: 12 }}> {/* Add top margin to the container */}
+        <Container sx={{ mt: 12 }}> 
           <Routes>
             <Route path="/" element={<ProductList onAddToCart={handleAddToCart} />} />
             <Route path="/todo" element={<TodoPage />} />
-            <Route path="/about" element={<About />} /> {/* Add route for About page */}
+            <Route path="/about" element={<About />} /> 
           </Routes>
         </Container>
         <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerClose}>

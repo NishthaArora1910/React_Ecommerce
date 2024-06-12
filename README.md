@@ -11,7 +11,7 @@ total calculation, and item deletion from the cart. Additionally, it includes a 
 **IV) ToDo Page**: Add , Edit , Delete suggestions , Persist suggestions using local storage
 
 ## Technologies Used :
-**React**
-**Material-UI**
-**Next.js (optional, for routing)**
-**LocalStorage API**
+**React** , 
+**Material-UI** ,
+**Next.js (optional, for routing)** ,
+**LocalStorage API** .

@@ -13,5 +13,5 @@ total calculation, and item deletion from the cart. Additionally, it includes a 
 ## Technologies Used :
 **React** , 
 **Material-UI** ,
-**Next.js (optional, for routing)** ,
+**JavaScript** ,
 **LocalStorage API** .
